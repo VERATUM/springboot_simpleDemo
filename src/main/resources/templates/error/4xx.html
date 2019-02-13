@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="ver">
+		<title>Signin Template for Bootstrap</title>
+		<link th:href="@{/favicon.ico}" rel="shortcut icon">
+	</head>
+	<body>
+			<h1 th:text="${status}"></h1><br/>
+			<!--判断是否有错误-->
+			<p style="color: red" th:text="${error}" th:if="${not #strings.isEmpty(error)}"></p><br/>
+			<p style="color: red" th:text="${#dates.format(timestamp,'yyyy-MM-dd HH:dd:ss')}" th:if="${not #strings.isEmpty(timestamp)}"></p><br/>
+			<p style="color: green" th:text="${exception}" th:if="${not #strings.isEmpty(exception)}"></p><br/>
+			<p style="color: yellow" th:text="${message}" th:if="${not #strings.isEmpty(message)}"></p><br/>
+			<p style="color: black" th:text="${path}" th:if="${not #strings.isEmpty(path)}"></p><br/>
+
+
+			<p>© 2017-2018</p>
+	</body>
+
+</html>

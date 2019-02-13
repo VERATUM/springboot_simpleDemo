@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="ver">
+		<title>Signin Template for Bootstrap</title>
+		<link th:href="@{/favicon.ico}" rel="shortcut icon">
+		<!-- Bootstrap core CSS -->
+		<!--th:href="@{/}"自动匹配项目名-->
+		<link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.css}" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="asserts/css/signin.css" th:href="@{/asserts/css/signin.css}" rel="stylesheet">
+	</head>
+	<body class="text-center">
+			<img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+			<h1 class="h3 mb-3 font-weight-normal" th:text="${status}"></h1>
+			<!--判断是否有错误-->
+			<p style="color: red" th:text="${error}" th:if="${not #strings.isEmpty(error)}"></p>
+			<p style="color: red" th:text="${exception}" th:if="${not exception}"></p>
+			<p style="color: red" th:text="${message}" th:if="${not #strings.isEmpty(message)}"></p>
+			<p style="color: red" th:text="${path}" th:if="${not #strings.isEmpty(path)}"></p>
+
+
+			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+	</body>
+
+</html>

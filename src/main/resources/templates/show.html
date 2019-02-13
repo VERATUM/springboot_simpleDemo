@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>thymeleaf</title>
+</head>
+<body>
+    <center>thymeleaf实例</center>
+    <div>
+        <p th:text="${hello}"></p>
+    </div>
+    <div>
+        <p>thymeleaf的th:each</p>
+        <p>utext会转义特殊字符</p>
+        <p th:each="a:${arr}" th:utext="${a}"></p>
+    </div>
+    <p>
+        <span th:each="info : ${arr}">[[${info}]]</span>
+    </p>
+</body>
+</html>
